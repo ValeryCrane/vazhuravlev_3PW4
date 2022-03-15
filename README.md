@@ -11,3 +11,5 @@
 - Pressing “done” button creates new note and it shows on CollectionView.
 
 - Keeping data about notes in CoreData.
+
+- Note have relation with other notes using CoreData. Also, you can edit notes. And I made some refactoring.

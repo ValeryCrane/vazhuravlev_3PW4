@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Note Container View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="vazhuravlev_3PW4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteContainerViewController" id="BYZ-38-t0r" customClass="NoteContainerViewController" customModule="vazhuravlev_3PW4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,19 +36,22 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIF-IT-RrK">
                                                     <rect key="frame" x="16" y="16" width="382" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="odp-3a-dtT"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                     <color key="textColor" systemColor="systemGray3Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-dZ-ffB">
-                                                    <rect key="frame" x="16" y="50" width="382" height="24"/>
+                                                    <rect key="frame" x="16" y="50" width="382" height="57"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbZ-op-DS3">
                                                     <rect key="frame" x="0.0" y="123" width="414" height="1"/>
-                                                    <color key="backgroundColor" systemColor="separatorColor"/>
+                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="pe3-Jm-RIO"/>
                                                     </constraints>
@@ -57,6 +60,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="tIF-IT-RrK" secondAttribute="trailing" constant="16" id="1MP-DP-o5j"/>
                                                 <constraint firstAttribute="trailing" secondItem="xbZ-op-DS3" secondAttribute="trailing" id="1oL-cJ-f46"/>
+                                                <constraint firstItem="xbZ-op-DS3" firstAttribute="top" secondItem="D2o-dZ-ffB" secondAttribute="bottom" constant="16" id="Dbn-1N-QFd"/>
                                                 <constraint firstAttribute="bottom" secondItem="xbZ-op-DS3" secondAttribute="bottom" id="ErA-lM-n5U"/>
                                                 <constraint firstItem="xbZ-op-DS3" firstAttribute="leading" secondItem="Jkm-nP-GMK" secondAttribute="leading" id="Irg-S7-Rsr"/>
                                                 <constraint firstItem="tIF-IT-RrK" firstAttribute="leading" secondItem="Jkm-nP-GMK" secondAttribute="leading" constant="16" id="PBI-gL-UQA"/>
@@ -130,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="87.723214285714278"/>
         </scene>
-        <!--Note View Controller-->
+        <!--Edit Note View Controller-->
         <scene sceneID="eJV-qN-Y0l">
             <objects>
-                <viewController storyboardIdentifier="NoteViewController" id="3f3-ds-bQF" customClass="NoteViewController" customModule="vazhuravlev_3PW4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteViewController" id="3f3-ds-bQF" customClass="EditNoteViewController" customModule="vazhuravlev_3PW4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t1x-Gf-32B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,9 +180,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

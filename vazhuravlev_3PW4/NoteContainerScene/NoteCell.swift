@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
+// View, representing a note in collection view.
 class NoteCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    public func getHeight() -> CGFloat {
+        return titleLabel.frame.height + descriptionLabel.frame.height + 32;
+    }
 }
+

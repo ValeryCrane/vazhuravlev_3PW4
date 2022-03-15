@@ -19,9 +19,23 @@ extension Note {
     @NSManaged public var creationDate: Date
     @NSManaged public var descriptionText: String?
     @NSManaged public var title: String?
+    @NSManaged public var links: NSSet?
 
 }
 
-extension Note : Identifiable {
+// MARK: Generated accessors for links
+extension Note {
+
+    @objc(addLinksObject:)
+    @NSManaged public func addToLinks(_ value: Note)
+
+    @objc(removeLinksObject:)
+    @NSManaged public func removeFromLinks(_ value: Note)
+
+    @objc(addLinks:)
+    @NSManaged public func addToLinks(_ values: NSSet)
+
+    @objc(removeLinks:)
+    @NSManaged public func removeFromLinks(_ values: NSSet)
 
 }
