@@ -9,3 +9,5 @@
 - Create note screen contains done button on NavigationBar.
 
 - Pressing “done” button creates new note and it shows on CollectionView.
+
+- Keeping data about notes in CoreData.

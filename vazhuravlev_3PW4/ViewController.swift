@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     @IBOutlet weak var emptyCollectionLabel: UILabel!
@@ -18,8 +19,19 @@ class ViewController: UIViewController {
         }
     }
     
+    public let context: NSManagedObjectContext = {
+        let container = NSPersistentContainer(name: "CoreDataNotes")
+        container.loadPersistentStores { _, error in
+            if let error = error {
+                fatalError("Container loading failed")
+            }
+        }
+        return container.viewContext
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadData()
         self.title = "Notes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add, target: self, action: #selector(self.createNode))
@@ -34,6 +46,22 @@ class ViewController: UIViewController {
         noteViewController.delegate = self
         navigationController?.pushViewController(noteViewController, animated: true)
     }
+    
+    private func loadData() {
+        if let notes = try? context.fetch(Note.fetchRequest()) as? [Note] {
+            self.notes = notes.sorted(
+                by: {$0.creationDate.compare($1.creationDate) == .orderedDescending})
+        } else {
+            self.notes = []
+        }
+    }
+    
+    func saveChanges() {
+        if context.hasChanges {
+            try? context.save()
+        }
+        loadData()
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -45,7 +73,7 @@ extension ViewController: UICollectionViewDataSource {
             withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCell
         let note = notes[indexPath.row]
         cell.titleLabel.text = note.title
-        cell.descriptionLabel.text = note.description
+        cell.descriptionLabel.text = note.descriptionText
         return cell
     }
 }

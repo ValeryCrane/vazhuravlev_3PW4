@@ -23,8 +23,11 @@ class NoteViewController: UIViewController {
         let title = titleTextField.text ?? ""
         let description = textView.text ?? ""
         if !title.isEmpty {
-            let note = Note(title: title, description: description)
-            delegate.notes.append(note)
+            let note = Note(context: delegate.context)
+            note.title = title
+            note.descriptionText = description
+            note.creationDate = Date()
+            delegate.saveChanges()
         }
         self.navigationController?.popViewController(animated: true)
     }
