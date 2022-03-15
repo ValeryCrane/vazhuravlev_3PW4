@@ -19,7 +19,11 @@ class ViewController: UIViewController {
     }
     
     @objc func createNode() {
-        print("Button was clicked.")
+        guard let noteViewController =
+                storyboard?.instantiateViewController(identifier: "NoteViewController")
+        else { return }
+        
+        navigationController?.pushViewController(noteViewController, animated: true)
     }
 }
 

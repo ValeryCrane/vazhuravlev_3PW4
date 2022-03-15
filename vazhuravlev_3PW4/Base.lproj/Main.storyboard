@@ -46,9 +46,19 @@
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbZ-op-DS3">
+                                                    <rect key="frame" x="0.0" y="123" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="separatorColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="pe3-Jm-RIO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="tIF-IT-RrK" secondAttribute="trailing" constant="16" id="1MP-DP-o5j"/>
+                                                <constraint firstAttribute="trailing" secondItem="xbZ-op-DS3" secondAttribute="trailing" id="1oL-cJ-f46"/>
+                                                <constraint firstAttribute="bottom" secondItem="xbZ-op-DS3" secondAttribute="bottom" id="ErA-lM-n5U"/>
+                                                <constraint firstItem="xbZ-op-DS3" firstAttribute="leading" secondItem="Jkm-nP-GMK" secondAttribute="leading" id="Irg-S7-Rsr"/>
                                                 <constraint firstItem="tIF-IT-RrK" firstAttribute="leading" secondItem="Jkm-nP-GMK" secondAttribute="leading" constant="16" id="PBI-gL-UQA"/>
                                                 <constraint firstItem="D2o-dZ-ffB" firstAttribute="top" secondItem="tIF-IT-RrK" secondAttribute="bottom" id="W1D-tc-Ygo"/>
                                                 <constraint firstItem="tIF-IT-RrK" firstAttribute="top" secondItem="Jkm-nP-GMK" secondAttribute="top" constant="16" id="XgQ-5V-DhC"/>
@@ -56,7 +66,7 @@
                                                 <constraint firstItem="D2o-dZ-ffB" firstAttribute="leading" secondItem="Jkm-nP-GMK" secondAttribute="leading" constant="16" id="fLO-H6-TfA"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="414" height="124"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -129,20 +139,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbP-Na-exW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="57.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="52.5"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGray3Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DWq-Ov-gLW">
-                                <rect key="frame" x="0.0" y="101.5" width="414" height="760.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="0.0" y="96.5" width="414" height="765.5"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mv8-I1-6j6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DWq-Ov-gLW" firstAttribute="bottom" secondItem="mv8-I1-6j6" secondAttribute="bottom" id="9aR-vH-aUL"/>
                             <constraint firstItem="DWq-Ov-gLW" firstAttribute="leading" secondItem="mv8-I1-6j6" secondAttribute="leading" id="Aav-f4-ots"/>
@@ -164,11 +176,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,9 +187,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
