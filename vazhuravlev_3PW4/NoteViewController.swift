@@ -14,5 +14,10 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.saveNote))
+    }
+    
+    @objc private func saveNote() {
+        print("Done button clicked")
     }
 }
