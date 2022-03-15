@@ -13,10 +13,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add, target: self, action: #selector(self.createNode))
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @objc func createNode() {
+        print("Button was clicked.")
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -34,7 +38,6 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(collectionView.frame.width)
         return CGSize(width: collectionView.frame.width, height: 150)
     }
 }

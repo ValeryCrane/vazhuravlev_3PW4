@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		484A06E227E095FE00B48D34 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A06E127E095FE00B48D34 /* NoteCell.swift */; };
+		484A06EA27E09A3E00B48D34 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A06E927E09A3E00B48D34 /* NoteViewController.swift */; };
 		48ACDAD527E08AAD00CFDF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDAD427E08AAD00CFDF65 /* AppDelegate.swift */; };
 		48ACDAD727E08AAD00CFDF65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDAD627E08AAD00CFDF65 /* SceneDelegate.swift */; };
 		48ACDAD927E08AAD00CFDF65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDAD827E08AAD00CFDF65 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		484A06E127E095FE00B48D34 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		484A06E627E0972D00B48D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		484A06E927E09A3E00B48D34 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		48ACDAD127E08AAD00CFDF65 /* vazhuravlev_3PW4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vazhuravlev_3PW4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48ACDAD427E08AAD00CFDF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48ACDAD627E08AAD00CFDF65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				48ACDAD627E08AAD00CFDF65 /* SceneDelegate.swift */,
 				484A06E127E095FE00B48D34 /* NoteCell.swift */,
 				48ACDAD827E08AAD00CFDF65 /* ViewController.swift */,
+				484A06E927E09A3E00B48D34 /* NoteViewController.swift */,
 				48ACDADA27E08AAD00CFDF65 /* Main.storyboard */,
 				48ACDADD27E08AAE00CFDF65 /* Assets.xcassets */,
 				48ACDADF27E08AAE00CFDF65 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				48ACDAD927E08AAD00CFDF65 /* ViewController.swift in Sources */,
 				48ACDAD527E08AAD00CFDF65 /* AppDelegate.swift in Sources */,
 				48ACDAD727E08AAD00CFDF65 /* SceneDelegate.swift in Sources */,
+				484A06EA27E09A3E00B48D34 /* NoteViewController.swift in Sources */,
 				484A06E227E095FE00B48D34 /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
