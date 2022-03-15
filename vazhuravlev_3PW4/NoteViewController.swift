@@ -12,13 +12,15 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
     
-    public weak var delegate: ViewController!
+    public weak var delegate: ViewController! // Link to main ViewController
     
+    // MARK: - ViewController's life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.saveNote))
     }
     
+    // Saves note and closes ViewController.
     @objc private func saveNote() {
         let title = titleTextField.text ?? ""
         let description = textView.text ?? ""
