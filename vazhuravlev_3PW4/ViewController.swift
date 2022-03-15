@@ -11,31 +11,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var emptyCollectionLabel: UILabel!
     @IBOutlet weak var notesCollectionView: UICollectionView!
     
+    public var notes: [Note] = [] {
+        didSet {
+            emptyCollectionLabel.isHidden = (notes.count != 0)
+            notesCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Notes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add, target: self, action: #selector(self.createNode))
         // Do any additional setup after loading the view.
     }
     
-    @objc func createNode() {
+    @objc private func createNode() {
         guard let noteViewController =
-                storyboard?.instantiateViewController(identifier: "NoteViewController")
-        else { return }
+                storyboard?.instantiateViewController(
+                    identifier: "NoteViewController") as? NoteViewController else { return }
         
+        noteViewController.delegate = self
         navigationController?.pushViewController(noteViewController, animated: true)
     }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
+        self.notes.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCell
-        cell.titleLabel.text = "Yeah"
-        cell.descriptionLabel.text = "That's aewsome"
+        let note = notes[indexPath.row]
+        cell.titleLabel.text = note.title
+        cell.descriptionLabel.text = note.description
         return cell
     }
 }

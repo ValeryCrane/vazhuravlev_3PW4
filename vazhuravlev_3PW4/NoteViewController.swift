@@ -12,12 +12,20 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
     
+    public weak var delegate: ViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.saveNote))
     }
     
     @objc private func saveNote() {
-        print("Done button clicked")
+        let title = titleTextField.text ?? ""
+        let description = textView.text ?? ""
+        if !title.isEmpty {
+            let note = Note(title: title, description: description)
+            delegate.notes.append(note)
+        }
+        self.navigationController?.popViewController(animated: true)
     }
 }
