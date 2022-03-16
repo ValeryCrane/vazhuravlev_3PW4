@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  vazhuravlev_3PW4
 //
-//  Created by Валерий Журавлев on 15.03.2022.
+//  Created by Валерий Журавлев on 16.03.2022.
 //
 //
 
@@ -16,9 +16,10 @@ extension Note {
         return NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged public var creationDate: Date
-    @NSManaged public var descriptionText: String?
     @NSManaged public var title: String?
+    @NSManaged public var descriptionText: String?
+    @NSManaged public var creationDate: Date
+    @NSManaged public var status: Int32
     @NSManaged public var links: NSSet?
 
 }
@@ -37,5 +38,9 @@ extension Note {
 
     @objc(removeLinks:)
     @NSManaged public func removeFromLinks(_ values: NSSet)
+
+}
+
+extension Note : Identifiable {
 
 }

@@ -13,3 +13,5 @@
 - Keeping data about notes in CoreData.
 
 - Note have relation with other notes using CoreData. Also, you can edit notes. And I made some refactoring.
+
+- Added status property(done, waiting, new or others) with type Integer32 for Note entity on first version of CoreData model.

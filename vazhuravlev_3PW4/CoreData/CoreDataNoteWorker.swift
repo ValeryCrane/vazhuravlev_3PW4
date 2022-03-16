@@ -38,11 +38,12 @@ class CoreDataNoteWorker {
     }
     
     // Method add note via context.
-    public func addNote(title: String, descriptionText: String) {
+    public func addNote(title: String, descriptionText: String, status: NoteStatus) {
         let note = Note(context: CoreDataNoteWorker.context)
         note.title = title
         note.descriptionText = descriptionText
         note.creationDate = Date()
+        note.status = status.rawValue
         self.saveChanges()
     }
     
@@ -53,9 +54,12 @@ class CoreDataNoteWorker {
     }
     
     // Method add note via context.
-    public func change(note: Note, title: String?, description: String?) {
+    public func change(note: Note, title: String?, description: String?, status: NoteStatus?) {
         note.title = title
         note.descriptionText = description
+        if let status = status {
+            note.status = status.rawValue
+        }
         self.saveChanges()
     }
     

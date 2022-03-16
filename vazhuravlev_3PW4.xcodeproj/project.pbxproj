@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		484A06E227E095FE00B48D34 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A06E127E095FE00B48D34 /* NoteCell.swift */; };
 		484A06EA27E09A3E00B48D34 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A06E927E09A3E00B48D34 /* EditNoteViewController.swift */; };
-		484A06F627E0B13200B48D34 /* CoreDataNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 484A06F427E0B13200B48D34 /* CoreDataNotes.xcdatamodeld */; };
 		484A071927E0C82700B48D34 /* CoreDataNoteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A071827E0C82700B48D34 /* CoreDataNoteWorker.swift */; };
 		484A071F27E0CE6000B48D34 /* NoteContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A071E27E0CE6000B48D34 /* NoteContainerType.swift */; };
 		484A072627E0E79700B48D34 /* NoteContainerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A072527E0E79700B48D34 /* NoteContainerRouter.swift */; };
-		484A072F27E0FADC00B48D34 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A072D27E0FAD900B48D34 /* Note+CoreDataClass.swift */; };
-		484A073027E0FADC00B48D34 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A072E27E0FAD900B48D34 /* Note+CoreDataProperties.swift */; };
+		484A076727E1E0F300B48D34 /* CoreDataNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 484A076527E1E0F300B48D34 /* CoreDataNotes.xcdatamodeld */; };
+		484A077727E1E21E00B48D34 /* NoteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A077627E1E21E00B48D34 /* NoteStatus.swift */; };
+		484A077C27E1E29000B48D34 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A077A27E1E29000B48D34 /* Note+CoreDataClass.swift */; };
+		484A077D27E1E29000B48D34 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A077B27E1E29000B48D34 /* Note+CoreDataProperties.swift */; };
 		48ACDAD527E08AAD00CFDF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDAD427E08AAD00CFDF65 /* AppDelegate.swift */; };
 		48ACDAD727E08AAD00CFDF65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDAD627E08AAD00CFDF65 /* SceneDelegate.swift */; };
 		48ACDAD927E08AAD00CFDF65 /* NoteContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDAD827E08AAD00CFDF65 /* NoteContainerViewController.swift */; };
@@ -27,12 +28,13 @@
 		484A06E127E095FE00B48D34 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		484A06E627E0972D00B48D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		484A06E927E09A3E00B48D34 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
-		484A06F527E0B13200B48D34 /* CoreDataNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataNotes.xcdatamodel; sourceTree = "<group>"; };
 		484A071827E0C82700B48D34 /* CoreDataNoteWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataNoteWorker.swift; sourceTree = "<group>"; };
 		484A071E27E0CE6000B48D34 /* NoteContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContainerType.swift; sourceTree = "<group>"; };
 		484A072527E0E79700B48D34 /* NoteContainerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContainerRouter.swift; sourceTree = "<group>"; };
-		484A072D27E0FAD900B48D34 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		484A072E27E0FAD900B48D34 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		484A076627E1E0F300B48D34 /* CoreDataNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataNotes.xcdatamodel; sourceTree = "<group>"; };
+		484A077627E1E21E00B48D34 /* NoteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStatus.swift; sourceTree = "<group>"; };
+		484A077A27E1E29000B48D34 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		484A077B27E1E29000B48D34 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		48ACDAD127E08AAD00CFDF65 /* vazhuravlev_3PW4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vazhuravlev_3PW4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48ACDAD427E08AAD00CFDF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48ACDAD627E08AAD00CFDF65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +59,11 @@
 		484A06FF27E0B22700B48D34 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				484A06F427E0B13200B48D34 /* CoreDataNotes.xcdatamodeld */,
-				484A072D27E0FAD900B48D34 /* Note+CoreDataClass.swift */,
-				484A072E27E0FAD900B48D34 /* Note+CoreDataProperties.swift */,
+				484A076527E1E0F300B48D34 /* CoreDataNotes.xcdatamodeld */,
+				484A077A27E1E29000B48D34 /* Note+CoreDataClass.swift */,
+				484A077B27E1E29000B48D34 /* Note+CoreDataProperties.swift */,
 				484A071827E0C82700B48D34 /* CoreDataNoteWorker.swift */,
+				484A077627E1E21E00B48D34 /* NoteStatus.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -195,16 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484A073027E0FADC00B48D34 /* Note+CoreDataProperties.swift in Sources */,
+				484A077727E1E21E00B48D34 /* NoteStatus.swift in Sources */,
+				484A076727E1E0F300B48D34 /* CoreDataNotes.xcdatamodeld in Sources */,
+				484A077C27E1E29000B48D34 /* Note+CoreDataClass.swift in Sources */,
 				48ACDAD927E08AAD00CFDF65 /* NoteContainerViewController.swift in Sources */,
 				484A071927E0C82700B48D34 /* CoreDataNoteWorker.swift in Sources */,
+				484A077D27E1E29000B48D34 /* Note+CoreDataProperties.swift in Sources */,
 				48ACDAD527E08AAD00CFDF65 /* AppDelegate.swift in Sources */,
 				48ACDAD727E08AAD00CFDF65 /* SceneDelegate.swift in Sources */,
 				484A06EA27E09A3E00B48D34 /* EditNoteViewController.swift in Sources */,
 				484A072627E0E79700B48D34 /* NoteContainerRouter.swift in Sources */,
 				484A071F27E0CE6000B48D34 /* NoteContainerType.swift in Sources */,
-				484A072F27E0FADC00B48D34 /* Note+CoreDataClass.swift in Sources */,
-				484A06F627E0B13200B48D34 /* CoreDataNotes.xcdatamodeld in Sources */,
 				484A06E227E095FE00B48D34 /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,12 +413,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		484A06F427E0B13200B48D34 /* CoreDataNotes.xcdatamodeld */ = {
+		484A076527E1E0F300B48D34 /* CoreDataNotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				484A06F527E0B13200B48D34 /* CoreDataNotes.xcdatamodel */,
+				484A076627E1E0F300B48D34 /* CoreDataNotes.xcdatamodel */,
 			);
-			currentVersion = 484A06F527E0B13200B48D34 /* CoreDataNotes.xcdatamodel */;
+			currentVersion = 484A076627E1E0F300B48D34 /* CoreDataNotes.xcdatamodel */;
 			path = CoreDataNotes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

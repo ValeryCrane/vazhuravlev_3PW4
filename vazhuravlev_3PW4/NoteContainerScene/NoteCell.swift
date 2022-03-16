@@ -12,9 +12,6 @@ import UIKit
 class NoteCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    public func getHeight() -> CGFloat {
-        return titleLabel.frame.height + descriptionLabel.frame.height + 32;
-    }
+    @IBOutlet weak var statusLabel: UILabel!
 }
 
