@@ -117,6 +117,7 @@ extension NoteContainerViewController: UICollectionViewDataSource {
         self.notes.count
     }
     
+    // Cretion cell based on its index.
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
@@ -124,18 +125,9 @@ extension NoteContainerViewController: UICollectionViewDataSource {
         let note = notes[indexPath.row]
         cell.titleLabel.text = note.title
         cell.descriptionLabel.text = note.descriptionText
-        if let noteStatus = NoteStatus(rawValue: note.status) {
-            switch noteStatus {
-            case NoteStatus.new:
-                cell.statusLabel.text = "new"
-                cell.statusLabel.textColor = .green
-            case NoteStatus.waiting:
-                cell.statusLabel.text = "waiting"
-                cell.statusLabel.textColor = .cyan
-            case NoteStatus.done:
-                cell.statusLabel.text = "done"
-                cell.statusLabel.textColor = .magenta
-            }
+        if let noteStatusEnum = NoteStatus(rawValue: note.status.id),
+           let noteStatus = noteWorker.getStatus(status: noteStatusEnum){
+            cell.statusLabel.text = noteStatus.title
         }
         return cell
     }

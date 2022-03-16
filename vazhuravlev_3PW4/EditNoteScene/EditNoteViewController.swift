@@ -15,22 +15,36 @@ class EditNoteViewController: UIViewController {
     
     public var noteToEdit: Note?
     
-    private var statuses = ["new", "waiting", "done"]
+    private var statusTitles: [String] = []
     
     private let noteWorker = CoreDataNoteWorker()
     
     // MARK: - ViewController's life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTitles()
+        setupUI()
+    }
+    
+    private func setupTitles() {
+        statusTitles = noteWorker.getStatuses().map { $0.title ?? "" }
+    }
+    
+    
+    // MARK: - setup functions.
+    private func setupUI() {
         if let note = noteToEdit {
             self.title = "Edit note"
             titleTextField.text = note.title
             textView.text = note.descriptionText
-            statusPicker.selectRow(Int(note.status), inComponent: 0, animated: false)
+            print(Int(note.status.id))
+            statusPicker.selectRow(Int(note.status.id), inComponent: 0, animated: false)
         } else {
             self.title = "Add note"
         }
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.saveNote))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .done, target: self, action: #selector(self.saveNote))
         
         titleTextField.attributedPlaceholder = NSAttributedString(
             string: "Note title",
@@ -38,7 +52,8 @@ class EditNoteViewController: UIViewController {
         )
     }
     
-    // MARK: - close functions
+    
+    // MARK: - other functions
     // Saves note and closes NoteContainerViewController.
     @objc private func saveNote() {
         let title = titleTextField.text ?? ""
@@ -53,6 +68,7 @@ class EditNoteViewController: UIViewController {
         }
         self.navigationController?.popViewController(animated: true)
     }
+    
 }
 
 
@@ -63,20 +79,15 @@ extension EditNoteViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        statuses.count
+        statusTitles.count
     }
 }
 
 extension EditNoteViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        var color = UIColor()
-        switch row {
-        case 0: color = .green
-        case 1: color = .cyan
-        case 2: color = .magenta
-        default: color = .white
-        }
-        return NSAttributedString(string: self.statuses[row], attributes:
-                            [NSAttributedString.Key.foregroundColor: color])
+        return NSAttributedString(
+            string: self.statusTitles[row],
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.orange]
+        )
     }
 }

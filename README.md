@@ -15,3 +15,5 @@
 - Note have relation with other notes using CoreData. Also, you can edit notes. And I made some refactoring.
 
 - Added status property(done, waiting, new or others) with type Integer32 for Note entity on first version of CoreData model.
+
+- Created new version of CoreData and added Status entity. After that made migration using .xcmappingmodel and custom NSEntityMigrationPolicy.

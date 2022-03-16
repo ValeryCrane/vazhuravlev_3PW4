@@ -16,11 +16,11 @@ extension Note {
         return NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var descriptionText: String?
     @NSManaged public var creationDate: Date
-    @NSManaged public var status: Int32
+    @NSManaged public var descriptionText: String?
+    @NSManaged public var title: String?
     @NSManaged public var links: NSSet?
+    @NSManaged public var status: Status
 
 }
 
@@ -38,9 +38,5 @@ extension Note {
 
     @objc(removeLinks:)
     @NSManaged public func removeFromLinks(_ values: NSSet)
-
-}
-
-extension Note : Identifiable {
 
 }
