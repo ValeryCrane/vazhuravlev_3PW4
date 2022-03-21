@@ -37,7 +37,6 @@ class EditNoteViewController: UIViewController {
             self.title = "Edit note"
             titleTextField.text = note.title
             textView.text = note.descriptionText
-            print(Int(note.status.id))
             statusPicker.selectRow(Int(note.status.id), inComponent: 0, animated: false)
         } else {
             self.title = "Add note"

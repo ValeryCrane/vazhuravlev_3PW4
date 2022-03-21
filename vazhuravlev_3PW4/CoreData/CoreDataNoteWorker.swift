@@ -56,7 +56,6 @@ class CoreDataNoteWorker {
             fetchRequest.predicate = NSPredicate(format: "id == %d", statusId)
             
             guard let statuses = try? context.fetch(fetchRequest), statuses.count != 0 else {
-                print("New status with id: \(statusId)")
                 let newStatus = Status(context: context)
                 
                 newStatus.id = Int32(statusId)

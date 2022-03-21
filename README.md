@@ -1,5 +1,11 @@
 #  Notes app
 
+## Description
+
+ Long tap on note opens menu, where you can delete or open linked notes. If you want to delete a link, make a long tap on linked note in linked notes menu.
+ 
+ ## Tasks made
+
 - The project contains NavigationController and CollectionView with cell.
 
 - NavigationBar contains “add note” button.
